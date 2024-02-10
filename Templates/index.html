@@ -12,14 +12,14 @@
 
     <title>Space Dynamic - SEO HTML5 Template</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-space-dynamic.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/fontawesome.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/templatemo-space-dynamic.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/animated.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/owl.css')}}">
   </head>
 
 <body>
@@ -47,17 +47,6 @@
             <a href="Templates/index.html" class="logo">
               <h4>Spac<span>Dyna</span></h4>
             </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="#about">About Us</a></li>
-              <li class="scroll-to-section"><a href="#services">Services</a></li>
-              <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
-              <li class="scroll-to-section"><a href="#blog">Blog</a></li> 
-              <li class="scroll-to-section"><a href="#contact">Message Us</a></li> 
-              <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Contact Now</a></div></li> 
-            </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>
             </a>
@@ -396,12 +385,12 @@
     </div>
   </div>
   <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/templatemo-custom.js"></script>
+  <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/js/owl-carousel.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/js/animation.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/js/imagesloaded.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/js/templatemo-custom.js')}}"></script>
 
 </body>
 </html>
