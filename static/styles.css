@@ -14,6 +14,20 @@ header {
     background-size: 200% 200%;
     animation: color 12s ease-in-out infinite;
 }
+.title {
+    font-family: 'gnuolane', 'Tungsten A', 'Tungsten B', 'Tungsten', Helvetica, sans-serif;
+    font-size: 100px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #FFFAE3;
+    text-align: center; 
+    margin: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+  }
+  
 @keyframes color {
     0%{
         background-position: 0 50%;
