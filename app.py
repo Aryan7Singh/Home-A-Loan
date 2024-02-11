@@ -22,11 +22,13 @@ def landing_page():
 def home_page():
     return render_template("index.html")
 
+@app.route('/index.html')
+def reLandingPage():
+    return redirect('/home')
+
 @app.route('/prediction', methods=['POST'])
 def prediction():
     load_model()
     
-    
-
 if __name__ == "__main__":
     app.run()
