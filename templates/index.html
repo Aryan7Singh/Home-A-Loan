@@ -27,43 +27,51 @@
     </header>
     <main id="mainContent">
         <div class="content2">
-            <h2>Enter your data</h2>
+            <h2>Enter your data (choose models)</h2>
         </div>
+        <div> 
+            <button class="model-options" id="model-options1">Logistic</button>
+            <button class="model-options" id="model-options2">LightGBM</button>
+            <button class="model-options" id="model-options3">xgbBooster</button>
+        </div>
+        
+        
+        
         <div class = "sliders"> 
             <div>
                 <h3>Year of Birth</h3>
     
-                <Input class="range" type="range" name="yearOfBirth" value="0" min="1960" max="2000" onChange="rangeSlide(this.value)" ></Input>
-                <span class = "slider-value">1950</span>
+                <Input class="range" type="range" name="yearOfBirth" value="0" min="1960" max="2000" onChange="rangeSlide()" ></Input>
+                <span class = "slider-value">1960</span>
             </div>
             <div>
                 <h3>Average Days Past Due</h3>
     
-                <Input class="range" type="range" name="averageDaysPastDue" value="0" min="0" max="10" onChange="rangeSlide(this.value)" ></Input>
+                <Input class="range" type="range" name="averageDaysPastDue" value="0" min="0" max="10" onChange="rangeSlide()" ></Input>
                 <span class = "slider-value">0</span>
             </div>
             <div>
                 <h3>Total Loan Payments</h3>
                 
-                <Input class="range" type="range" name="totalLoanPayments" value="0" min="0" max="60" onChange="rangeSlide(this.value)" ></Input>
+                <Input class="range" type="range" name="totalLoanPayments" value="0" min="0" max="60" onChange="rangeSlide()" ></Input>
                 <span class = "slider-value">0</span>
             </div>
             <div>
-                <h3>Number of Installments</h3>
+                <h3>Number of Early Installments</h3>
                 
-                <Input class="range" type="range" name="numberofInstallments" value="0" min="0" max="60" onChange="rangeSlide(this.value)" ></Input>
+                <Input class="range" type="range" name="numberofInstallments" value="0" min="0" max="60" onChange="rangeSlide()" ></Input>
                 <span class = "slider-value">0</span>
             </div>
             <div>
                 <h3>Percentage of Late Installments</h3>
     
-                <Input class="range" type="range" name="percentageofLateInstallment" value="0" min="0.0" max="1.0"  step="0.01"  onChange="rangeSlide(this.value)" ></Input>
+                <Input class="range" type="range" name="percentageofLateInstallment" value="0" min="0" max="25"   onChange="rangeSlide()" ></Input>
                 <span class = "slider-value">0</span>
             </div>
             <div>
                 <h3>Interest Rate</h3>
     
-                <Input class="range" type="range" name="interestRate" value="0" min="0.0" max="0.40" step="0.01" onChange="rangeSlide(this.value)"></Input>
+                <Input class="range" type="range" name="interestRate" value="0" min="0" max="40" onChange="rangeSlide()"></Input>
                 <span class = "slider-value">0</span>
             </div>
         </div>
@@ -76,7 +84,9 @@
                 </div>
             </div>
         </div>
-        <button id="viewInsightsButton">View Insights</button>
+        <form action="/insights" method="post">
+            <button id="viewInsightsButton">View Insights</button>
+        </form>
  
     </main>
     <footer>
@@ -84,6 +94,7 @@
            
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

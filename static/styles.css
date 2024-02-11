@@ -253,7 +253,122 @@ main {
     background-size: 150% 150%;
     position:relative;
 }
+.model-options {
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color, border-color, color, box-shadow, filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 1px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: black;
+    background-color: #FF794C;
+    height: 48px;
+    font-family: proxima-nova, proxima-nova-alt, canada-type-gibson, Gotham, "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.model-options.clicked {
+    background-color: #FE936F;
+}
+
+#model-options1 {
+    position: absolute;
+    top: 6em;
+    left: 44%;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 1px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: black;
+    background-color: #FF794C;
+    height: 48px;
+        font-family: proxima-nova, proxima-nova-alt, canada-type-gibson, Gotham, "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#model-options1.clicked {
+    background-color: #FE936F;
+}
+#model-options2 {
+    position: absolute;
+    top: 6em;
+    left: 30%;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 1px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: black;
+    background-color: #FF794C;
+    height: 48px;
+        font-family: proxima-nova, proxima-nova-alt, canada-type-gibson, Gotham, "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#model-options2.clicked {
+    background-color: #FE936F;
+}
+#model-options3 {
+    position: absolute;
+    top: 6em;
+    left: 57%;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 1px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: black;
+    background-color: #FF794C;
+    height: 48px;
+        font-family: proxima-nova, proxima-nova-alt, canada-type-gibson, Gotham, "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#model-options3.clicked {
+    background-color: #FE936F;
+}
 
 .button-1 {
     display: inline-block;
