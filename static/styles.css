@@ -17,14 +17,14 @@ header {
 
 .content2 > h2 {
     font-size: 2.5em;
-    margin-bottom: 500px;
+    margin-bottom: 2em;
+    margin-top: 1em;
     font-family: proxima-nova, proxima-nova-alt, canada-type-gibson, Gotham, "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
     font-size: 64px;
     font-style: normal;
     font-weight: 900;
     letter-spacing: 0px;
     line-height: 20px;
-    text-transform: uppercase;
     color: #1e1c1f;
 }
 
@@ -184,10 +184,11 @@ main {
     align-items: center;
     flex-direction: column;
     max-width: 100%;    
-    background: rgb(254, 255, 165);
-    background: radial-gradient(circle at 10% 20%, rgb(254, 255, 165) 0%, rgb(255, 232, 182) 90%);
-    animation: colorPan 8s ease-in-out infinite;
-    background-size: 300% 300%;
+    background: #DEE4EA ;
+    background: linear-gradient(to bottom right, #FCD181 0%, #E79087 90%);
+
+    animation: colorPan 4s ease-in-out infinite;
+    background-size: 150% 150%;
 }
 
 
