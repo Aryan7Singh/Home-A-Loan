@@ -1,18 +1,18 @@
 # dependencies
 import csv
 import os
-from flask import Flask, redirect, render_template, request
+from flask import Flask, redirect, render_template, request, jsonify
 import pandas as pd 
 
 app = Flask(__name__)
 
 # Load pickle model 
-
+'''
 def load_model():
     import pickle
     global model
     model = pickle.load(open('model.pkl', 'rb'))
-        
+'''  
 
 @app.route('/')
 def landing_page():
@@ -28,7 +28,11 @@ def reLandingPage():
 
 @app.route('/prediction', methods=['POST'])
 def prediction():
-    load_model()
+    #load_model()
+    data = request.get_json()
+    for slider_name, slider_value in data.items():
+        print(f"Slider '{slider_name}' value: {slider_value}")
+    return jsonify({'message': 'Slider values received successfully'})
     
 if __name__ == "__main__":
     app.run()

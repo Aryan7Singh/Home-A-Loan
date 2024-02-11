@@ -7,3 +7,29 @@ function scrollToMain() {
         });
     }
 }
+
+function rangeSlide(value) {
+    var sliderValues = {};
+    var sliders = document.querySelectorAll('.range');
+    sliders.forEach(function(slider) {
+        sliderValues[slider.getAttribute('name')] = slider.value;
+    });
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/predict", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(JSON.stringify(sliderValues));
+    
+}
+document.getElementById('submit-button').addEventListener('click', function() {
+    var sliderValues = {};
+    var sliders = document.querySelectorAll('.range');
+    sliders.forEach(function(slider) {
+        sliderValues[slider.getAttribute('name')] = slider.value;
+    });
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/prediction", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(JSON.stringify(sliderValues));
+});

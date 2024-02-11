@@ -33,16 +33,7 @@
             <span id="rangeValue">0</span>
             <Input class="range" type="range" name "" value="0" min="0" max="100" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
         </div>
-        <script type="text/javascript">
-            function rangeSlide(value) {
-                document.getElementById('rangeValue').innerHTML = value;
-                xhr.open("POST", "/prediction", true);
-                xhr.setRequestHeader("Content-Type", "application/json");
-                xhr.send(JSON.stringify({ value: value }));
-            }
-            
-        </script>
-        <h2 id="predictionResult"></h2>
+        <button id = "submit-button">Submit</button>
     </main>
     <footer>
 
