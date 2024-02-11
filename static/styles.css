@@ -16,16 +16,29 @@ header {
 }
 
 .content2 > h2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 2.5em;
     margin-bottom: 2em;
     margin-top: 1em;
     font-family: proxima-nova, proxima-nova-alt, canada-type-gibson, Gotham, "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
-    font-size: 64px;
     font-style: normal;
     font-weight: 900;
     letter-spacing: 0px;
     line-height: 20px;
     color: #1e1c1f;
+  }
+h3 {
+    font-family: proxima-nova, proxima-nova-alt, canada-type-gibson, Gotham, "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
+    margin-bottom: 0.2em;
+}
+.sliders {
+    position: absolute;
+    margin-top: 1em;
+    margin-left: 15em;
+    left: 0;
 }
 
 #features {
@@ -152,9 +165,58 @@ header {
     border-radius: 50%;
     transform: rotate(45deg);
 }
-#submit-button {
 
+#blob4 {
+    width: 26em;
+    height: 26em;
+    background-color: #FF7A4C; 
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transform: scale(1.2) rotate(45deg);
+    animation: blobAnimation 2s infinite alternate;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+#blob4:before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 40px;
+    width: 26em;
+    height: 26em;
+    background-color: #FF936F; 
+    border-radius: 50%;
+    transform: rotate(45deg);
+  }
+.blob-text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
+
+.blob-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: proxima-nova, proxima-nova-alt, canada-type-gibson, Gotham, "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    transform: translate(-20%, -50%);
+    font-size: 3em; 
+    color: black; 
+}
+.output {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: 0.5em;
+    margin-right:8em;
+    transform: translateY(-50%);
+}
+
+
 
   
 @keyframes color {
@@ -189,6 +251,7 @@ main {
 
     animation: colorPan 4s ease-in-out infinite;
     background-size: 150% 150%;
+    position:relative;
 }
 
 
@@ -228,31 +291,66 @@ main {
     color: #1d1c1c;
     font-weight: 400;
   }
-  .range {
+.range {
     width: 400px;
-    height: 15px;
+    height: 1em;
     -webkit-appearance: none;
     background: #111;
     outline: none;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
-  }
-  .range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #75739b;
-    cursor: pointer;
-    border: 4px solid #333;
-    box-shadow: -407px 0 0 400px #75739b;
-  }
-  .range {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 30px;
+    
   }
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-  @keyframes changeColor {
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background: #F19D39 ;
+    cursor: pointer;
+    border: 4px solid #F19D39 ;
+    box-shadow: -407px 0 0 400px #F97A4E;
+  }
+.slider-value{
+    font-family:  proxima-nova, proxima-nova-alt, canada-type-gibson, Gotham, "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
+  }
+
+
+#viewInsightsButton {
+    position: absolute;
+    bottom: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 1px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: black;
+    background-color: #FF794C;
+    height: 48px;
+        font-family: proxima-nova, proxima-nova-alt, canada-type-gibson, Gotham, "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#viewInsightsButton:hover{
+    background-color: #FE936F;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@keyframes changeColor {
     0%, 100% {
         color: #4682B4; 
     }

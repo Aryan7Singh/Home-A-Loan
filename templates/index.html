@@ -29,34 +29,55 @@
         <div class="content2">
             <h2>Enter your data</h2>
         </div>
-        <div>
-            <span class = "slider-value" id="ageDisplay">1</span>
-            <Input class="range" type="range" name="age" value="0" min="1" max="100" onChange="rangeSlide(this.value)"></Input>
+        <div class = "sliders"> 
+            <div>
+                <h3>Year of Birth</h3>
+    
+                <Input class="range" type="range" name="yearOfBirth" value="0" min="1960" max="2000" onChange="rangeSlide(this.value)" ></Input>
+                <span class = "slider-value">1950</span>
+            </div>
+            <div>
+                <h3>Average Days Past Due</h3>
+    
+                <Input class="range" type="range" name="averageDaysPastDue" value="0" min="0" max="10" onChange="rangeSlide(this.value)" ></Input>
+                <span class = "slider-value">0</span>
+            </div>
+            <div>
+                <h3>Total Loan Payments</h3>
+                
+                <Input class="range" type="range" name="totalLoanPayments" value="0" min="0" max="60" onChange="rangeSlide(this.value)" ></Input>
+                <span class = "slider-value">0</span>
+            </div>
+            <div>
+                <h3>Number of Installments</h3>
+                
+                <Input class="range" type="range" name="numberofInstallments" value="0" min="0" max="60" onChange="rangeSlide(this.value)" ></Input>
+                <span class = "slider-value">0</span>
+            </div>
+            <div>
+                <h3>Percentage of Late Installments</h3>
+    
+                <Input class="range" type="range" name="percentageofLateInstallment" value="0" min="0.0" max="1.0"  step="0.01"  onChange="rangeSlide(this.value)" ></Input>
+                <span class = "slider-value">0</span>
+            </div>
+            <div>
+                <h3>Interest Rate</h3>
+    
+                <Input class="range" type="range" name="interestRate" value="0" min="0.0" max="0.40" step="0.01" onChange="rangeSlide(this.value)"></Input>
+                <span class = "slider-value">0</span>
+            </div>
         </div>
-        <div>
-            <span class = "slider-value" id="yearOfBirthDisplay">1950</span>
-            <Input class="range" type="range" name="yearOfBirth" value="0" min="1950" max="2024" onChange="rangeSlide(this.value)" ></Input>
+        <div class="output"> 
+            <div id="blob4">
+                <div class="blob-text-wrapper">
+                    <div class="blob-text">
+                        Enter Data
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <span class = "slider-value" id="debtDisplay">0</span>
-            <Input class="range" type="range" name="debt" value="0" min="0" max="100" onChange="rangeSlide(this.value)" ></Input>
-        </div>
-        <div>
-            <span class = "slider-value" id="incomeDisplay">0</span>
-            <Input class="range" type="range" name="income" value="0" min="0" max="100" onChange="rangeSlide(this.value)" ></Input>
-        </div>
-        <div>
-            <span class = "slider-value" id="savingsDisplay">0</span>
-            <Input class="range" type="range" name="savings" value="0" min="0" max="100" onChange="rangeSlide(this.value)" ></Input>
-        </div>
-        <div>
-            <span class = "slider-value" id="creditScoreDisplay">0</span>
-            <Input class="range" type="range" name="creditScore" value="0" min="0" max="100" onChange="rangeSlide(this.value)" "></Input>
-        </div>
-        <div>
-            <span class = "slider-value" id="employmentStatusDisplay">0</span>
-            <Input class="range" type="range" name="employmentStatus" value="0" min="0" max="100" onChange="rangeSlide(this.value)"></Input>
-        </div>
+        <button id="viewInsightsButton">View Insights</button>
+ 
     </main>
     <footer>
 

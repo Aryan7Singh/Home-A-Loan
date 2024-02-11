@@ -3,6 +3,7 @@ seaborn
 pandas
 scipy
 scikit-learn
+matplotlib
 tqdm
 xgboost
 lightgbm
@@ -11,3 +12,4 @@ flask
 joblib
 pyarrow
 fastparquet
+shap
