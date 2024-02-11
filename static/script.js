@@ -11,6 +11,7 @@ function scrollToMain() {
 function rangeSlide(value) {
     var sliderValues = {};
     var sliders = document.querySelectorAll('.range');
+    document.getElementById('rangeValue').innerHTML = value;
     sliders.forEach(function(slider) {
         sliderValues[slider.getAttribute('name')] = slider.value;
     });
