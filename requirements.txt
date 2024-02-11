@@ -1,0 +1,14 @@
+numpy
+seaborn
+pandas
+scipy
+scikit-learn
+matplotlib==3.5.3
+tqdm
+xgboost
+lightgbm
+polars
+flask
+joblib
+pyarrow
+fastparquet
