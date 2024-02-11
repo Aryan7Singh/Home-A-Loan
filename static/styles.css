@@ -277,6 +277,15 @@ main {
     font-family: proxima-nova, proxima-nova-alt, canada-type-gibson, Gotham, "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.images-container {
+    display: flex;
+}
+
+.images {
+    max-width: 325px; 
+    max-height: 325px;
+    margin-right: 10px; 
+}
 
 .model-options.clicked {
     background-color: #FE936F;

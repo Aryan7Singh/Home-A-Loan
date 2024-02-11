@@ -7,5 +7,21 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <main>
+    <form action="/back" method="post">
+        <button id="viewInsightsButton">Back</button>
+    </form>
+    <div class="images-container">
+        <img class = "images" src="{{ url_for('static', filename='birthyear.png') }}" alt="Histogram">
+        <img class = "images" src="{{ url_for('static', filename='pli.png') }}" alt="Histogram">
+        <img class = "images"  src="{{ url_for('static', filename='nei.png') }}" alt="Histogram">
+        <img class = "images" src="{{ url_for('static', filename='avgdpd.png') }}" alt="Histogram">
+    </div>
+    <br>
+    <div class="images-container">
+        <img class = "images" src="{{ url_for('static', filename='tlp.png') }}" alt="Histogram">
+        <img class = "images" src="{{ url_for('static', filename='ir.png') }}" alt="Histogram">
+        <img class = "images" src="{{ url_for('static', filename='pairplot.png') }}" alt="Histogram">
+        <img class = "images" src="{{ url_for('static', filename='correlationmatrix.png') }}" alt="Histogram">
+    </div>
 </main>
 </html>

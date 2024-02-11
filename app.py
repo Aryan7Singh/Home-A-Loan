@@ -43,10 +43,12 @@ def prediction():
     return jsonify({'message': "Risk: " + "{:.2f}".format(model.predict(birth_year, averageDaysPastDue, totalLoanPayments, numberofInstallments, percentageofLateInstallment, interestRate) * 100) + "%"})
 
 
-
 @app.route('/insights', methods=['POST'])
 def insights():
     return render_template('insights.html')
+@app.route('/back', methods=['POST'])
+def go_back():
+    return render_template('index.html')
 
 class Model:
     def __init__(self, dirs):
