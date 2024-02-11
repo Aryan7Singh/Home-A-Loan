@@ -8,16 +8,36 @@
 </head>
 <body>
     <header>
-        <h1 class="title">Home A Loan</h1>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="{{ url_for('static', filename='HomeLogo.png') }}">
+                </a>
+            </div>
+            <div class="content">
+                <h1>Home A Loan</h1>
+                <p>Home A Loan utilizes advanced machine learning algorithms to accurately assess each applicant's repayment capability, reducing the risk of default and promoting financial inclusion through informed lending decisions. We are committed to fair treatment, mitigating bias, and fostering economic empowerment for all applicants.</p>
+                <button onclick="scrollToMain()" class="button-1">Try it Now</button>
+            </div>
+        </div>
+        <div id="blob1"></div>
+        <div id="blob2"></div>
+        <div id="blob3"></div>
+
     </header>
     <main id="mainContent">
         <section>
             <h1 id="typingHeader"></h1>
         </section>
-        <div class="textBox">
-            <textarea id="newsInput" placeholder="Please enter your news (content only) and read the note below." name="news"></textarea>
-            <button id="submit-button" class="visible">Submit</button>
+        <div>
+            <span id="rangeValue">0</span>
+            <Input class="range" type="range" name "" value="0" min="0" max="100" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
         </div>
+        <script type="text/javascript">
+            function rangeSlide(value) {
+                document.getElementById('rangeValue').innerHTML = value;
+            }
+        </script>
         <h2 id="predictionResult"></h2>
     </main>
     <footer>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -9,24 +10,127 @@ html {
 }
 header {
     height: 100vh;
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);   
+    background: #3F3E3B;
     background-size: 200% 200%;
     animation: color 12s ease-in-out infinite;
 }
-.title {
-    font-family: 'gnuolane', 'Tungsten A', 'Tungsten B', 'Tungsten', Helvetica, sans-serif;
-    font-size: 100px;
-    font-weight: 300;
+
+.content > h1 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    font-family: proxima-nova, proxima-nova-alt, canada-type-gibson, Gotham, "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0px;
+    line-height: 64px;
     text-transform: uppercase;
+    color: #A95DFF;
+    animation: changeColor 8s linear infinite;
+}
+.content > p {
+    font-family: proxima-nova, proxima-nova-alt, canada-type-gibson, Gotham, "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0px;
+    line-height: 30px;
+    text-transform: none;
     color: #FFFAE3;
-    text-align: center; 
-    margin: auto; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; 
+    margin-bottom: 30px;
+}
+.content {
+    text-align: left;
+    max-width: 1500px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    left: 70px;
+    top: -50px;
+    position: relative;
+}
+.logo a {
+    display: block; 
+}
+.logo img {
+    padding-left: 20px;
+    max-height: 200px; 
+}
+#blob1 {
+    width: 200px;
+    height: 200px;
+    background-color: #ffa7da; 
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transform: scale(1.2) rotate(45deg);
+    animation: blobAnimation 2s infinite alternate;
   }
+  
+  #blob1:before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 40px;
+    width: 300px;
+    height: 300px;
+    background-color: #cf5e9f; 
+    border-radius: 50%;
+    transform: rotate(45deg);
+  }
+  #blob2 {
+    width: 200px;
+    height: 200px;
+    background-color: #3138a7; 
+    border-radius: 50%;
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    overflow: hidden;
+    transform: scale(1.2) rotate(45deg);
+    animation: blobAnimation 4s infinite alternate;
+}
+
+#blob2:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50px;
+    width: 200px;
+    height: 200px;
+    background-color: #636dff; 
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+#blob3 {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(142,106,198); 
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+    overflow: hidden;
+    transform: scale(1.2) rotate(45deg);
+    animation: blobAnimation 3s infinite alternate;
+}
+
+#blob3:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50px;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(200,117,221); 
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+
   
 @keyframes color {
     0%{
@@ -39,3 +143,110 @@ header {
         background-position: 0 50%;
     }
 }
+@keyframes blobAnimation {
+    0% {
+      transform: scale(1.2) rotate(45deg);
+    }
+    100% {
+      transform: scale(1) rotate(45deg);
+    }
+  }
+main {
+    padding: 10px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;    
+    background: rgb(254, 255, 165);
+    background: radial-gradient(circle at 10% 20%, rgb(254, 255, 165) 0%, rgb(255, 232, 182) 90%);
+    animation: colorPan 8s ease-in-out infinite;
+    background-size: 300% 300%;
+}
+
+
+.button-1 {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: #fff;
+    background-color: #D291BC;
+    height: 48px;
+    font-family: proxima-nova, proxima-nova-alt, canada-type-gibson, Gotham, "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
+   
+}
+
+.button-1:hover{
+    transform: scale(1.04);
+    background-color: #957DAD;
+}
+#rangeValue { 
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 6em;
+    color: #999;
+    font-weight: 400;
+  }
+  .range {
+    width: 400px;
+    height: 15px;
+    -webkit-appearance: none;
+    background: #111;
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+  }
+  .range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #00fd0a;
+    cursor: pointer;
+    border: 4px solid #333;
+    box-shadow: -407px 0 0 400px #00fd0a;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  @keyframes changeColor {
+    0%, 100% {
+        color: #4682B4; 
+    }
+    12.5% {
+        color: #6495ED; 
+    }
+    25% {
+        color: #6495ED;
+    }
+    37.5% {
+        color: #BA55D3;
+    }
+    50% {
+        color: #87CEEB; 
+    }
+    62.5% {
+        color: #4169E1; 
+    }
+    75% {
+        color: #9370DB; 
+    }
+    87.5% {
+        color: #4682B4; 
+    }
+}
+
