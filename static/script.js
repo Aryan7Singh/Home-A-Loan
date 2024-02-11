@@ -8,10 +8,10 @@ function scrollToMain() {
     }
 }
 
-function rangeSlide(value) {
+function rangeSlide(featureName, value) {
     var sliderValues = {};
     var sliders = document.querySelectorAll('.range');
-    document.getElementById('rangeValue').innerHTML = value;
+    document.getElementById(featureName + 'Display').innerHTML = value;
     sliders.forEach(function(slider) {
         sliderValues[slider.getAttribute('name')] = slider.value;
     });
@@ -20,8 +20,8 @@ function rangeSlide(value) {
     xhr.open("POST", "/predict", true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(JSON.stringify(sliderValues));
-    
 }
+
 document.getElementById('submit-button').addEventListener('click', function() {
     var sliderValues = {};
     var sliders = document.querySelectorAll('.range');
